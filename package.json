@@ -13,21 +13,25 @@
     "lint-fix": "vue-cli-service lint --fix"
   },
   "dependencies": {
+    "ant-design-vue": "^1.7.3",
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "chartist": "^0.11.0",
     "core-js": "^2.6.5",
+    "gmap-vue": "^1.5.0",
     "google-maps": "^3.2.1",
     "register-service-worker": "^1.5.2",
     "sweetalert": "^2.1.2",
     "v-tooltip": "^2.0.0-rc.33",
     "vue": "^2.6.6",
     "vue-bridge-webview": "^1.1.0",
+    "vue-carousel": "^0.18.0",
     "vue-form-wizard": "^0.8.4",
     "vue-html-to-paper": "^1.0.3",
     "vue-router": "^3.0.2",
     "vue-tables-2": "^1.4.70",
     "vue2-google-maps": "^0.8.4",
+    "vue2-transitions": "^0.3.0",
     "vuex": "^3.1.0"
   },
   "devDependencies": {

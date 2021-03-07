@@ -16,17 +16,22 @@ export default {
 			return this.$store.getters.isLoggedIn
 		}
 	},
+
 	methods: {
 		cekLogin() {
       let token = localStorage.getItem('token')
       if(!token) {
-        this.$router.push('/login')
+        this.$router.push('/')
       } 
     },
   },
+
 	mounted() {
     this.cekLogin()
+
   },
+
+
   created: function () {
     this.$axios.interceptors.response.use(undefined, function (err) {
       return new Promise(function (resolve, reject) {
@@ -36,7 +41,11 @@ export default {
         throw err;
       });
     });
-    this.$store.dispatch('cekLogin')
+    let token = localStorage.getItem('token')
+     if(token) {
+        this.$store.dispatch('cekLogin')
+      } 
+   
   }
 
 

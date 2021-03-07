@@ -9,7 +9,7 @@
         </ul>
       </nav>
       <div class="copyright text-center">
-        <a href="http://www.damri.co.id/" target="_blank">&copy; Damri</a> 2019
+        <a href="https://djaduls.dev/" target="_blank">&copy; Litha & Co</a> 2021
       </div>
     </div>
   </footer>

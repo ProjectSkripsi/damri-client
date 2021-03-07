@@ -7,6 +7,13 @@ import VueFormWizard from "vue-form-wizard";
 import "vue-form-wizard/dist/vue-form-wizard.min.css";
 import VueBridgeWebview from "vue-bridge-webview";
 import VueHtmlToPaper from "vue-html-to-paper";
+import Antd from "ant-design-vue/lib";
+import VueCarousel from "vue-carousel";
+import * as GmapVue from "gmap-vue";
+
+import "ant-design-vue/dist/antd.css";
+// import { Button } from "ant-design-vue";
+
 Vue.use(VueFormWizard);
 Vue.use(VueBridgeWebview);
 const options = {
@@ -17,10 +24,18 @@ const options = {
     "https://unpkg.com/kidlat-css/css/kidlat.css"
   ]
 };
-
+Vue.use(VueCarousel);
 Vue.use(VueHtmlToPaper, options);
-
+Vue.use(Antd);
 VueBridgeWebview.config(0, true);
+Vue.use(GmapVue, {
+  load: {
+    key: "AIzaSyC5Aexnwo5TYY3RVzF3JzvI9bUwWuVwdcx", //s
+    libraries: "places" // This is required if you use the Autocomplete plugin
+  },
+
+  installComponents: true
+});
 
 // LightBootstrap plugin
 import LightBootstrap from "./light-bootstrap-main";

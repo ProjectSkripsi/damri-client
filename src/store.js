@@ -2,7 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import axios from "axios";
 import swal from "sweetalert";
-// const baseUrl = `http://localhost:4000`;
+//const baseUrl = `http://localhost:4000`;
 const baseUrl = `https://damri-mks.herokuapp.com`;
 Vue.use(Vuex);
 export default new Vuex.Store({
@@ -50,7 +50,7 @@ export default new Vuex.Store({
             localStorage.setItem("token", token);
             axios.defaults.headers.common["Authorization"] = token;
             resolve(resp);
-            window.location = "/";
+            window.location = "/#/admin/overview";
           })
           .catch(err => {
             if (err.response.status === 400) {
@@ -91,8 +91,6 @@ export default new Vuex.Store({
     },
 
     logout({ commit }) {
-      console.log(`masuk`);
-
       return new Promise((resolve, reject) => {
         localStorage.removeItem("token");
         delete axios.defaults.headers.common["Authorization"];

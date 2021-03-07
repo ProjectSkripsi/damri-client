@@ -6,7 +6,7 @@
     <div class="sidebar-wrapper">
       <div class="logo">
             <div class="logo-img">
-                <img src="/img/damri1.png" alt="">
+                <img src="/img/litha.png" alt="" width="200px" height="50px">
             </div>
         <a href="#" class="simple-text logo__container">
           {{title}}

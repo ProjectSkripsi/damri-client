@@ -4,7 +4,7 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 					<span class="login100-form-title p-b-48">
-						<img src="/img/damri.png" width="100px" height="100px">
+						<img src="/img/litha.png" width="180px" height="40px">
 					</span>
 				<form class="login100-form validate-form mt-3">
 					<span class="login100-form-title p-b-26">
@@ -61,6 +61,12 @@ export default {
         }
 			  this.doLogin(data)
 		  },
+    },
+    mounted() {
+      let token = localStorage.getItem('token')
+      if(token) {
+        this.$router.push('/admin/overview')
+      } 
     },
 
 }
