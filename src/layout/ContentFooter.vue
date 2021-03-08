@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer" v-show="user.role === 'admin'">
+  <footer class="footer" >
     <div class="container-fluid">
       <nav>
         <ul class="footer-menu">

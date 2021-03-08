@@ -6,24 +6,24 @@
         <i class="nc-icon nc-chart-pie-35"></i>
         <p>Dashboard</p>
       </sidebar-link>
-      <sidebar-link to="/admin/bus" v-show="user.role === 'admin'">
+      <sidebar-link to="/admin/bus" >
         <i class="fa fa-bus"></i>
         <p>Data Bus</p>
       </sidebar-link>
-      <sidebar-link to="/admin/schedule-bus" v-show="user.role === 'admin'">
+      <sidebar-link to="/admin/schedule-bus" >
         <!-- <i class="fa fa-oclock"></i> -->
          <i class="nc-icon nc-compass-05"></i>
         <p>Jadwal Bus</p>
       </sidebar-link>
-      <sidebar-link to="/admin/teknisi" v-show="user.role === 'admin'">
+      <sidebar-link to="/admin/teknisi" >
         <i class="fa fa-users"></i>
         <p>Data Teknisi</p>
       </sidebar-link>
-      <sidebar-link to="/admin/result" v-show="user.role === 'admin'">
+      <sidebar-link to="/admin/result" >
         <i class="fa fa-file-text"></i>
         <p>Hasil Pengecekan</p>
       </sidebar-link>
-      <sidebar-link to="/admin/cek" v-show="user.role === 'member'">
+      <sidebar-link to="/admin/cek" >
         <i class="fa fa-file-text-o"></i>
         <p>Cek Kendaraan</p>
       </sidebar-link>

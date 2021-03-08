@@ -17,12 +17,12 @@
             </div>
         </div>
         
-        <div class="content" >
+        <!-- <div class="content" >
             halo
             hdisad
             adsa
             dsa
-        </div>
+        </div> -->
         
         <Footer />
        

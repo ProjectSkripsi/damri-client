@@ -3,7 +3,7 @@
   <ul class="nav nav-mobile-menu">
     <li class="nav-item">
       <a class="nav-link">
-        {{user.username}}
+        {{ this.lodash.get(user, 'username', '') }}
         <i class="fa fa-user-circle-o" aria-hidden="true"></i>
       </a>
     </li>
@@ -16,7 +16,10 @@
   </ul>
 </template>
 <script>
+
 import { mapState } from 'vuex';
+
+
   export default {
     name: 'mobile-menu',
     methods: {

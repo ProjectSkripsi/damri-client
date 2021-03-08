@@ -10,10 +10,12 @@ import VueHtmlToPaper from "vue-html-to-paper";
 import Antd from "ant-design-vue/lib";
 import VueCarousel from "vue-carousel";
 import * as GmapVue from "gmap-vue";
+import VueLodash from "vue-lodash";
+import lodash from "lodash";
 
 import "ant-design-vue/dist/antd.css";
 // import { Button } from "ant-design-vue";
-
+Vue.use(VueLodash, { lodash: lodash });
 Vue.use(VueFormWizard);
 Vue.use(VueBridgeWebview);
 const options = {

@@ -9,7 +9,7 @@
             </div>
             <div slot="content">
               <p class="card-category">Welcome back!</p>
-              <h4 class="card-title">{{user.name}}</h4>
+              <h4 class="card-title">{{ this.lodash.get(user, 'name' , 'SUPER ADMIN') }}</h4>
             </div>
           </stats-card>
         </div>
@@ -21,7 +21,7 @@
             </div>
             <div slot="content">
               <p class="card-category">Contact</p>
-              <h4 class="card-title">{{user.contact}}</h4>
+              <h4 class="card-title">{{ this.lodash.get(user, 'contact' , '08123456789') }}</h4>
             </div>
           </stats-card>
         </div>
@@ -33,7 +33,7 @@
             </div>
             <div slot="content">
               <p class="card-category">Alamat</p>
-              <h4 class="card-title">{{user.address}}</h4>
+              <h4 class="card-title">{{ this.lodash.get(user, 'address' , 'Makassar') }}</h4>
             </div>
           </stats-card>
         </div>
@@ -45,7 +45,7 @@
             </div>
             <div slot="content">
               <p class="card-category">Bus Inspection</p>
-              <h4 class="card-title">Total {{listBus.length}} Bus</h4>
+              <h4 class="card-title">Total {{listBus.length}}  Bus</h4>
             </div>
           </stats-card>
         </router-link>
