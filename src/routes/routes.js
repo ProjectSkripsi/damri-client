@@ -19,8 +19,9 @@ import Armada from "src/pages/Galery.vue";
 import About from "src/pages/About.vue";
 import Schedule from "src/pages/Schedule/index.vue";
 import AddSchedule from "src/pages/Schedule/AddSchedule.vue";
-
 import UpdateSchedule from "src/pages/Schedule/UpdateSchedule.vue";
+import Route from "src/pages/Route/index.vue";
+import BusDetail from "src/pages/Route/BusDetail.vue";
 
 const routes = [
   {
@@ -42,6 +43,16 @@ const routes = [
     path: "/login",
     name: "Login",
     component: Login
+  },
+  {
+    path: "/route",
+    name: "Route",
+    component: Route
+  },
+  {
+    path: "/route/:id",
+    name: "BusDetail",
+    component: BusDetail
   },
   // {
   //   path: "/login",
@@ -88,6 +99,7 @@ const routes = [
         name: "EditBus",
         component: EditBus
       },
+
       {
         path: "teknisi",
         name: "Technician",

@@ -12,12 +12,16 @@ import VueCarousel from "vue-carousel";
 import * as GmapVue from "gmap-vue";
 import VueLodash from "vue-lodash";
 import lodash from "lodash";
+import moment from "moment";
+
+Vue.prototype.moment = moment;
 
 import "ant-design-vue/dist/antd.css";
 // import { Button } from "ant-design-vue";
 Vue.use(VueLodash, { lodash: lodash });
 Vue.use(VueFormWizard);
 Vue.use(VueBridgeWebview);
+Vue.use(moment);
 const options = {
   name: "_blank",
   specs: ["fullscreen=yes", "titlebar=yes", "scrollbars=yes"],

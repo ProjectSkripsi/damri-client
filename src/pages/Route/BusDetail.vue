@@ -1,5 +1,7 @@
 <template>
-    <div class="content">
+  <div>
+     <navbar/>
+    <div class="container content mt-5 rows">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -28,7 +30,7 @@
                                     Date / Tanggal
                                 </div>
                                 <div class="col-md-5">
-                                    : <u>{{formatDate(equip.updatedAt)}}</u>
+                                    : <u>{{ moment(equip.updatedAt).format('DD-MM-YYYY') }}</u>
                                 </div> 
                             </div>
                             <div class="row">
@@ -596,15 +598,20 @@
             </div>
         </div>
     </div>
-
+    <Footer />
+  </div>
 
 </template>
 
 <script>
 import Card from 'src/components/Cards/Card.vue'
+ import Navbar from '../../layout/Navbar.vue';
+import Footer from '../../layout/Footer.vue';
 export default {
     components: {
-        Card
+        Card,
+        Navbar,
+        Footer
     },
     data() {
         return {
@@ -615,35 +622,26 @@ export default {
     },
 
     methods: {
-        getResult(){
-            this.$axios({
-                url: `/api/bus/${this.inspectId}`,
-                method: `get`,
-                headers: {
-                    token: localStorage.getItem('token')
-                }
-            })
-            .then(response =>{
-                this.inspectedBy = response.data.inspectionBy.name
-                this.equip = response.data
-            })
-        },
-        print() {
-            this.$htmlToPaper('pdf');
-        },
+      getResult(){
+        this.$axios({
+          url: `/api/bus/${this.inspectId}`,
+          method: `get`,
+          headers: {
+              token: localStorage.getItem('token')
+          }
+        })
+        .then(response =>{
+          this.inspectedBy = response.data.inspectionBy.name
+          this.equip = response.data
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+      },
+      print() {
+        this.$htmlToPaper('pdf');
+      },
 
-        formatDate(tgl) {
-            var monthNames = [
-                "January", "February", "March",
-                "April", "May", "June", "July",
-                "August", "September", "October",
-                "November", "December"
-            ];
-            var year = tgl.substring(0, 4)
-            var monthIndex = tgl.substring(5, 6)
-            var day = tgl.substring(8, 10)
-            return day + ' ' + monthNames[monthIndex] + ' ' + year;
-        },
     },
 
     mounted() {
@@ -658,5 +656,9 @@ export default {
 .vechile{
     font-size: 14px
 }
+
+  .rows {
+    padding-bottom: 100px;
+  }
 
 </style>

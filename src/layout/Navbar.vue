@@ -12,7 +12,7 @@
       <div class="collapse navbar-collapse text-right" id="navbarNavDropdown">
         <ul class="navbar-nav mt-1">
           <li class="nav-item">
-            <a class="nav-link" href="#">Rute</a>
+            <router-link to="/route"> <a class="nav-link" href="#">Rute <span class="sr-only"></span></a></router-link>
           </li>
           <li class="nav-item">
             <router-link to="/armada"> <a class="nav-link" href="#">Armada <span class="sr-only">(current)</span></a></router-link>
