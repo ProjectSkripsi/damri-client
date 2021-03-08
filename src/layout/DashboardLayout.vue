@@ -10,6 +10,11 @@
         <i class="fa fa-bus"></i>
         <p>Data Bus</p>
       </sidebar-link>
+      <sidebar-link to="/admin/schedule-bus" v-show="user.role === 'admin'">
+        <!-- <i class="fa fa-oclock"></i> -->
+         <i class="nc-icon nc-compass-05"></i>
+        <p>Jadwal Bus</p>
+      </sidebar-link>
       <sidebar-link to="/admin/teknisi" v-show="user.role === 'admin'">
         <i class="fa fa-users"></i>
         <p>Data Teknisi</p>

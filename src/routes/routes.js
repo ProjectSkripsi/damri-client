@@ -17,6 +17,10 @@ import PdfResult from "src/pages/PdfResult.vue";
 import Home from "src/pages/Home.vue";
 import Armada from "src/pages/Galery.vue";
 import About from "src/pages/About.vue";
+import Schedule from "src/pages/Schedule/index.vue";
+import AddSchedule from "src/pages/Schedule/AddSchedule.vue";
+
+import UpdateSchedule from "src/pages/Schedule/UpdateSchedule.vue";
 
 const routes = [
   {
@@ -63,6 +67,21 @@ const routes = [
         path: "addbus",
         name: "Add Bus",
         component: AddBus
+      },
+      {
+        path: "/admin/add-schedule-bus",
+        name: "add-schedule-bus",
+        component: AddSchedule
+      },
+      {
+        path: "/admin/schedule-bus",
+        name: "schedule-bus",
+        component: Schedule
+      },
+      {
+        path: "/admin/update-schedule-bus/:id",
+        name: "Edit Schedule",
+        component: UpdateSchedule
       },
       {
         path: "/admin/bus/:id",
