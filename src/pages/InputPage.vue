@@ -14,11 +14,16 @@
                         <select class="form-control form-control-sm" v-model="selected">
                             <option v-for="bust in listBus" :key=bust._id :value="bust">{{bust.vechileType}}</option>
                         </select>
+                        <label  class="pt-3">Teknisi</label>
+                        <select class="form-control form-control-sm" v-model="selected.inspectionBy">
+                            <option v-for="technisy in tecnicians" :key=technisy._id :value="technisy._id">{{technisy.name}}</option>
+                        </select>
                         <label class="pt-3">No. Polisi</label>
                         <input type="text" class="form-control form-control-sm" v-model="selected._id" form-control-sm hidden>
                         <input type="text" class="form-control form-control-sm" v-model="selected.policeNo" form-control-sm disabled>
                         <label class="pt-3">No. Bus</label>
                         <input type="text" class="form-control form-control-sm" v-model="selected.idBus" form-control-sm disabled>
+                       
                     </div>
                 </tab-content>
                 <tab-content title="Kelengkapan I"
@@ -332,7 +337,8 @@ export default {
     data() {
         return {
             bus: {},
-            selected: {}
+            selected: {},
+            tecnicians: []
         }
     },
 
@@ -422,7 +428,23 @@ export default {
                     console.log(err);
                 })
             }
-        }
+        },
+
+        getTechnician(){
+            this.$axios({
+                url: `/api/users/all`,
+                method: `get`,
+                headers: {
+                    token: localStorage.getItem('token')
+                }
+            })
+            .then(response=>{
+                this.tecnicians = response.data
+            })
+            .catch(err =>{
+                console.log(err);
+            })
+        },
     },
 
     computed: {
@@ -431,6 +453,7 @@ export default {
 
     mounted() {
         this.$store.dispatch('getBus')
+        this.getTechnician()
     },
   
   
