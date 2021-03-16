@@ -167,7 +167,7 @@ export default {
         uploadfiles({ onSuccess, onError, file }) {
             let formPicture = new FormData()
             formPicture.append('file', file)
-             axios.post(`http://localhost:4000/api/upload/image`, formPicture,{
+             axios.post(`https://damri-mks.herokuapp.com/api/upload/image`, formPicture,{
                 headers: {
                     token: localStorage.getItem('token')
                 }
