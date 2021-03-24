@@ -6,13 +6,13 @@
             <img src="img/litha.png" width="150" height="30" class="d-inline-block align-top" alt="">
           </a>
         </router-link>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button"  @click.prevent="click" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse text-right" id="navbarNavDropdown">
+      <div class="collapse navbar-collapse text-right" v-bind:class="{ show: isShow }" id="navbarNavDropdown"> x
         <ul class="navbar-nav mt-1">
           <li class="nav-item">
-            <router-link to="/route"> <a class="nav-link" href="#">Rute <span class="sr-only"></span></a></router-link>
+            <router-link to="/route"> <a class="nav-link" href="#">Rute  <span class="sr-only"></span></a></router-link>
           </li>
           <li class="nav-item">
             <router-link to="/armada"> <a class="nav-link" href="#">Armada <span class="sr-only">(current)</span></a></router-link>
@@ -32,8 +32,22 @@
 
 <script>
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+  data() {
+    return {
+      isShow: false,
+     
+    }
+  },
+  methods: {
+    click(){
+      this.isShow = this.isShow === true ? false : true
+      
+    },
+  }
 }
+
+
 </script>
 
 
