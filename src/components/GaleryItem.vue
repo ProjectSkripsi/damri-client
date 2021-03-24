@@ -42,7 +42,7 @@ export default {
         modal1: false,
       }
     };
-  }
+  }, 
 }
 </script>
 

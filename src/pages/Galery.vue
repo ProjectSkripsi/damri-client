@@ -8,7 +8,7 @@
                 <Galery v-for="galeri in galeries" :key="galeri._id"
                   :idBus="galeri.idBus"
                   :policeNo="galeri.policeNo"
-                  :cover="galeri.imageUrl[0].url"
+                  :cover="_.get(galeri, 'imageUrl[0].url', '')"
                   :vechileType="galeri.vechileType"
                 />
               </div>
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-
+import _ from 'lodash'
 import Navbar from '../layout/Navbar.vue';
 import Footer from '../layout/Footer.vue';
 import Galery from '../components/GaleryItem'
@@ -42,6 +42,7 @@ export default {
           
         })
         .then(response=>{
+          
           this.galeries = response.data
         })
         .catch(err =>{
