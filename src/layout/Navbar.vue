@@ -9,7 +9,7 @@
         <button class="navbar-toggler" type="button"  @click.prevent="click" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse text-right" v-bind:class="{ show: isShow }" id="navbarNavDropdown"> x
+      <div class="collapse navbar-collapse text-right" v-bind:class="{ show: isShow }" id="navbarNavDropdown"> <a v-show="isShow" @click.prevent="click" > x </a>
         <ul class="navbar-nav mt-1">
           <li class="nav-item">
             <router-link to="/route"> <a class="nav-link" href="#">Rute  <span class="sr-only"></span></a></router-link>
