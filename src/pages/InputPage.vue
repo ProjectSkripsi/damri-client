@@ -12,7 +12,7 @@
                     <div class="text-center">
                         <label>Jenis Kendaraan</label>
                         <select class="form-control form-control-sm" v-model="selected">
-                            <option v-for="bust in listBus" :key=bust._id :value="bust">{{bust.vechileType}}</option>
+                            <option v-for="bust in listBus" :key=bust._id :value="bust">{{bust.policeNo}} - {{bust.vechileType}} </option>
                         </select>
                         <label  class="pt-3">Teknisi</label>
                         <select class="form-control form-control-sm" v-model="selected.inspectionBy">
@@ -422,7 +422,7 @@ export default {
                         })
                     }
                     this.selected = {}
-                    this.$router.replace('/')
+                    this.$router.replace('/admin/result')
                 })
                 .catch(err =>{
                     console.log(err);
