@@ -1,6 +1,6 @@
 <template>
   <div>
-     <navbar/>
+    <navbar/>
     <div class="container content mt-5 rows">
         <div class="container-fluid">
             <div class="row">
@@ -30,7 +30,7 @@
                                     Date / Tanggal
                                 </div>
                                 <div class="col-md-5">
-                                    : <u>{{ moment(equip.updatedAt).format('DD-MM-YYYY') }}</u>
+                                    : <u>{{ moment(equip.updatedAt).format('LL') }}</u>
                                 </div> 
                             </div>
                             <div class="row">
@@ -587,13 +587,18 @@
                                 <div class="col-md-4">
                                 </div>
                             </div>
+                          
+
+                            <div class="row mt-4 ml-1 mb-2">
+                                <div class="image-area mr-4 mt-4" v-for="bust in equip.imageUrl" :key=bust._id> 
+                                    <img :src=bust.url  alt="Preview"  class="center-block rounded">
+                                   
+                                </div>       
+                            
+                            </div>
                         </div> 
                     </card>
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <button class="btn btn-success btn-sm" @click.prevent="print" ><i class="fa fa-floppy-o" aria-hidden="true"></i> Cetak</button>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -631,6 +636,7 @@ export default {
           }
         })
         .then(response =>{
+           
           this.inspectedBy = response.data.inspectionBy.name
           this.equip = response.data
         })
@@ -660,5 +666,45 @@ export default {
   .rows {
     padding-bottom: 100px;
   }
+
+
+.image-area {
+    position: relative;
+    width: 20%;
+    background: #333;
+    border-radius: 5px
+}
+.image-area img{
+    max-width: 100%;
+    height: auto;
+}
+.remove-image {
+    display: none;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-radius: 10em;
+    padding: 2px 6px 3px;
+    text-decoration: none;
+    font: 700 21px/20px sans-serif;
+    background: #555;
+    border: 3px solid #fff;
+    color: #FFF;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    -webkit-transition: background 0.5s;
+    transition: background 0.5s;
+}
+.remove-image:hover {
+    background: #E54E4E;
+    padding: 3px 7px 5px;
+    top: -11px;
+    right: -11px;
+}
+.remove-image:active {
+    background: #E54E4E;
+    top: -10px;
+    right: -11px;
+}
 
 </style>

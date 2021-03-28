@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-md-2">
                         <div class="form-group">
-                            <label class="pt-2">Username:</label>
+                            <label class="pt-2">ID Teknisi:</label>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -41,7 +41,7 @@
                     <div class="col-md-3">
                     </div>
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-md-3">
                     </div>
                     <div class="col-md-2">
@@ -57,7 +57,7 @@
                     </div>
                     <div class="col-md-3">
                     </div>
-                </div>
+                </div> -->
                 <div class="row">
                     <div class="col-md-3">
                     </div>
@@ -110,48 +110,104 @@ export default {
     },
     methods: {
         save(){
-            this.$axios({
-                url: `/api/users/signup`,
-                method: `post`,
-                data: this.technician,
-                headers: {
-                    token: localStorage.getItem('token')
-                }
-            })
-            .then(response =>{
-                this.technician = {}
-                this.$notify({
-                    component: notification,
-                    message: `Sukses menambahkan data teknisi`,
-                    icon: 'fa fa-check',
-                    type: 'success'
+            const { isUpdate } = this.$route.params
+            if (!isUpdate) {
+                this.$axios({
+                    url: `/api/users/add-technician`,
+                    method: `post`,
+                    data: this.technician,
+                    headers: {
+                        token: localStorage.getItem('token')
+                    }
                 })
-            })
-            .catch(err =>{
-                if(err.response.status === 403){
+                .then(response =>{
+                    
+                    this.technician = {}
                     this.$notify({
                         component: notification,
-                        message: `Silahkan masukkan data yang lengkap`,
+                        message: `Sukses menambahkan data teknisi`,
                         icon: 'fa fa-check',
-                        type: 'warning'
+                        type: 'success'
                     })
-                } else if (err.response.status === 400) {
+                })
+                .catch(err =>{
+                    if(err.response.status === 403){
+                        this.$notify({
+                            component: notification,
+                            message: `Silahkan masukkan data yang lengkap`,
+                            icon: 'fa fa-check',
+                            type: 'warning'
+                        })
+                    } else if (err.response.status === 400) {
+                        this.$notify({
+                            component: notification,
+                            message: `Username telah terdaftar`,
+                            icon: 'fa fa-check',
+                            type: 'warning'
+                        })
+                    } else if (err.response.status === 500) {
+                        this.$notify({
+                            component: notification,
+                            message: `Silahkan masukkan data yang lengkap`,
+                            icon: 'fa fa-check',
+                            type: 'danger'
+                        })
+                    }
+                })
+            } else {
+                console.log('update');
+                this.$axios({
+                    url: `/api/users/update-technician/${this.technician._id}`,
+                    method: `post`,
+                    data: this.technician,
+                    headers: {
+                        token: localStorage.getItem('token')
+                    }
+                })
+                .then(response =>{
+                    this.technician = {}
                     this.$notify({
                         component: notification,
-                        message: `Username telah terdaftar`,
+                        message: `Sukses update data teknisi`,
                         icon: 'fa fa-check',
-                        type: 'warning'
+                        type: 'success'
                     })
-                } else if (err.response.status === 500) {
-                    this.$notify({
-                        component: notification,
-                        message: `Server Down`,
-                        icon: 'fa fa-check',
-                        type: 'danger'
-                    })
-                }
-            })
+                })
+                .catch(err =>{
+                    if(err.response.status === 403){
+                        this.$notify({
+                            component: notification,
+                            message: `Silahkan masukkan data yang lengkap`,
+                            icon: 'fa fa-check',
+                            type: 'warning'
+                        })
+                    } else if (err.response.status === 400) {
+                        this.$notify({
+                            component: notification,
+                            message: `Username telah terdaftar`,
+                            icon: 'fa fa-check',
+                            type: 'warning'
+                        })
+                    } else if (err.response.status === 500) {
+                        this.$notify({
+                            component: notification,
+                            message: `Silahkan masukkan data yang lengkap`,
+                            icon: 'fa fa-check',
+                            type: 'danger'
+                        })
+                    }
+                })
+            }
         }
     },
+    mounted() {
+  
+        const { isUpdate } = this.$route.params
+        if (isUpdate) {
+            this.technician = this.$route.params.data
+
+        }
+    },
+
 }
 </script>

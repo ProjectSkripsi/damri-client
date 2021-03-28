@@ -2,7 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import axios from "axios";
 import swal from "sweetalert";
-//const baseUrl = `http://localhost:4000`;
+// const baseUrl = `http://localhost:4000`;
 const baseUrl = `https://damri-mks.herokuapp.com`;
 Vue.use(Vuex);
 export default new Vuex.Store({
@@ -44,7 +44,7 @@ export default new Vuex.Store({
           .then(resp => {
             const token = resp.data.token;
             const xuser = resp.data.user;
-            console.log(resp.xuser);
+
             commit("auth_user", xuser);
             commit("auth_success", token);
             localStorage.setItem("token", token);

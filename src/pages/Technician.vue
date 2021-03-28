@@ -14,7 +14,7 @@
 </template>
 <script>
   import TabelTechnician from './Technician/TabelTechnician.vue'
-  import UserCard from './UserProfile/UserCard.vue'
+  import UserCard from './MasterBus/UserCard.vue'
 
   export default {
     components: {

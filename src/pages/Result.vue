@@ -15,7 +15,7 @@
 </template>
 <script>
   
-import UserCard from './UserProfile/UserCard.vue'
+import UserCard from './MasterBus/UserCard.vue'
 import TableHasil from './Result/TableHasil.vue'
 
 export default {

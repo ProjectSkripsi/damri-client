@@ -11,6 +11,7 @@
     <div class="bus mt-4" v-cloak>
       <v-client-table :columns="columns" :data="userList" :options="options">
         <template slot="Tindakan" slot-scope="props" class="text-center">
+          <router-link :to="{ name: 'AddTechnician', params: { data: props.row, isUpdate: true }}"> <i class="fa fa-pencil-square-o"></i> </router-link>&nbsp;
           <a @click.prevent="handleDelete(props.row._id)" href="" class="fa fa-trash-o pt-1"></a>&nbsp;
         </template>
       </v-client-table>
@@ -32,7 +33,7 @@
         options: {
           headings: {
             name: 'Nama',
-            username: 'Username',
+            username: 'ID Teknisi',
             address: 'Alamat',
             contact: 'No. Handphone'
           },

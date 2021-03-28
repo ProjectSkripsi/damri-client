@@ -22,6 +22,7 @@
 <script>
 import notification from "@/components/NotificationPlugin/Notification.vue"
 import Card from 'src/components/Cards/Card.vue'
+import moment from 'moment'
 export default {
     components: {
         Card
@@ -36,7 +37,7 @@ export default {
                     idBus: 'Kode Bus',
                     vechileType: 'Jenis Bus',
                     policeNo: 'No. Polisi',
-                    inspectionBy: 'Pemeriksa',
+                    'inspectionBy.name': 'Pemeriksa',
                     updatedAt: 'Tanggal Pemeriksaan',
                     result: 'Hasil Pemeriksaan'
                 },

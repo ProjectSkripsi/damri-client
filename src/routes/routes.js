@@ -5,9 +5,9 @@ import NotFound from "../pages/NotFoundPage.vue";
 // Admin pages
 import Overview from "src/pages/Overview.vue";
 import Bus from "src/pages/Bus.vue";
-import AddBus from "src/pages/UserProfile/Addbus.vue";
+import AddBus from "src/pages/MasterBus/Addbus.vue";
 import AddTechnician from "src/pages/Technician/AddTechnician.vue";
-import EditBus from "src/pages/UserProfile/EditBus.vue";
+import EditBus from "src/pages/MasterBus/EditBus.vue";
 import Technician from "src/pages/Technician.vue";
 import Result from "src/pages/Result.vue";
 import Notifications from "src/pages/Notifications.vue";

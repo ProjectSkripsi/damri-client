@@ -3,8 +3,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <edit-profile-form>
-          </edit-profile-form>
+          <BusTable />
         </div>
         <div class="col-md-4">
         </div>
@@ -13,13 +12,12 @@
   </div>
 </template>
 <script>
-  import EditProfileForm from './UserProfile/EditProfileForm.vue'
-  import UserCard from './UserProfile/UserCard.vue'
-
+  import BusTable from './MasterBus/BusTable.vue'
+  
   export default {
     components: {
-      EditProfileForm,
-      UserCard
+      BusTable,
+  
     }
   }
 
