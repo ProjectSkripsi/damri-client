@@ -634,7 +634,7 @@ export default {
                 }
             })
             .then(response =>{
-                console.log(response);
+              
                 this.inspectedBy = response.data.inspectionBy.name
                 this.equip = response.data
             })

@@ -22,6 +22,8 @@ import AddSchedule from "src/pages/Schedule/AddSchedule.vue";
 import UpdateSchedule from "src/pages/Schedule/UpdateSchedule.vue";
 import Route from "src/pages/Route/index.vue";
 import BusDetail from "src/pages/Route/BusDetail.vue";
+import Criteria from "src/pages/Criteria.vue";
+import AddCriteria from "src/pages/Criteria/AddCriteria.vue";
 
 const routes = [
   {
@@ -124,6 +126,16 @@ const routes = [
         path: "/admin/result/:id",
         name: "pdfview",
         component: PdfResult
+      },
+      {
+        path: "/admin/criteria",
+        name: "criteria",
+        component: Criteria
+      },
+      {
+        path: "/admin/add-criteria",
+        name: "Add Criteria",
+        component: AddCriteria
       }
     ]
   },
