@@ -1,16 +1,20 @@
 <template>
   <card>
+   
     <div class="row">
       <div class="col-md-7">
-        <h4 slot="header" class="card-title">Pembobotan Kriteria</h4>
+        <h4 slot="header" class="card-title">Data Training</h4>
       </div>
-      
+      <div class="col-md-5 text-right">
+        <router-link to="/admin/data-training/add-data-training/"><button type="button" class="btn btn-primary btn-fill btn-sm"><i class="fa fa-plus" aria-hidden="true"></i> Data Training</button></router-link>
+      </div>
     </div><hr>
     <div class="bus mt-4" v-cloak>
       <v-client-table :columns="columns" :data="userList" :options="options">
         <template slot="Tindakan" slot-scope="props" class="text-center">
-          <router-link :to="{ name: 'Add Criteria', params: { data: props.row, isUpdate: true }}"> <i class="fa fa-pencil-square-o"></i> </router-link>&nbsp;
+           <router-link :to="{ path: '/admin/data-training/view-data-training', query: { id: props.row._id }}" > <i class="fa fa-eye"></i> </router-link>&nbsp;&nbsp;&nbsp;&nbsp;
          
+          <a v-show="userList.length > 2" @click.prevent="handleDelete(props.row._id)" href="" class="fa fa-trash-o pt-1"></a>&nbsp;
         </template>
       </v-client-table>
     </div>
@@ -21,21 +25,18 @@
   import Card from 'src/components/Cards/Card.vue'
 
   export default {
-    name: 'TableCriteria',
+    name: 'DataTraining',
     components: {
       Card
     },
     data () {
       return {
         userList: [],
-        columns: ['name', 'alias', 'initialWeight', 'repairWeight', 'Tindakan'],
+        columns: ['name',   'Tindakan'],
         options: {
           headings: {
             name: 'Kriteria',
-            alias: 'Alias',
-            initialWeight: 'Bobot Awal',
-            repairWeight: 'Bobot Perbaikan'
-           
+                    
           },
           requestAdapter(data) {
             return {
@@ -47,24 +48,25 @@
           },
           base:'glyphicon', up:'glyphicon-chevron-up', down:'glyphicon-chevron-down', is:'glyphicon-sort',
           uniqueKey: '_id',
-          perPage: 22,
-          perPageValues:[22],
-          sortable: ['name', 'initialWeight', ],
-          filterable: ['name','initialWeight', ]
+          perPage: 20,
+          perPageValues:[20],
+          sortable: ['name'],
+          filterable: ['name' ]
         }
       }
     },
     methods: {
       getCriteria(){
         this.$axios({
-          url: `/api/criteria/test`,
+          url: `/api/data-training`,
           method: `get`,
           headers: {
             token: localStorage.getItem('token')
           }
         })
         .then(response=>{
-          this.userList = response.data.data
+          
+          this.userList = response.data
         })
         .catch(err =>{
           console.log(err);
@@ -82,7 +84,7 @@
         .then(willDelete =>{
           if(willDelete){
             this.$axios({
-              url: `/api/criteria/${id}`,
+              url: `/api/data-training/${id}`,
               method: 'delete',
               headers: {
                 token: localStorage.getItem('token')
@@ -91,7 +93,7 @@
             .then(response =>{
               this.$notify({
                 component: notification,
-                message: `Sukses! Menghapus data kriteria`,
+                message: `Sukses! Menghapus data `,
                 icon: 'fa fa-check',
                 type: 'warning'
               })

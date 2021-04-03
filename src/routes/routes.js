@@ -24,6 +24,9 @@ import Route from "src/pages/Route/index.vue";
 import BusDetail from "src/pages/Route/BusDetail.vue";
 import Criteria from "src/pages/Criteria.vue";
 import AddCriteria from "src/pages/Criteria/AddCriteria.vue";
+import DataTraining from "src/pages/DataTraining.vue";
+import AddDataTraining from "src/pages/DataTraining/AddDataTraining.vue";
+import ViewDataTraining from "src/pages/DataTraining/ViewData.vue";
 
 const routes = [
   {
@@ -133,9 +136,24 @@ const routes = [
         component: Criteria
       },
       {
-        path: "/admin/add-criteria",
+        path: "/admin/criteria/add-criteria",
         name: "Add Criteria",
         component: AddCriteria
+      },
+      {
+        path: "/admin/data-training",
+        name: "Data Training",
+        component: DataTraining
+      },
+      {
+        path: "/admin/data-training/add-data-training",
+        name: "Add DataTraining",
+        component: AddDataTraining
+      },
+      {
+        path: "/admin/data-training/view-data-training",
+        name: "View Data Training",
+        component: ViewDataTraining
       }
     ]
   },

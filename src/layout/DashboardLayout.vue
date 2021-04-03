@@ -27,9 +27,13 @@
         <i class="fa fa-file-text-o"></i>
         <p>Cek Kendaraan</p>
       </sidebar-link>
-       <sidebar-link to="/admin/criteria" >
-      <i class="fa fa-calculator"></i>
+      <sidebar-link to="/admin/criteria" >
+        <i class="fa fa-calculator"></i>
         <p>Setting Bobot</p>
+      </sidebar-link>
+      <sidebar-link to="/admin/data-training" >
+      <i class="fas fa-train"></i>
+        <p>Data Training</p>
       </sidebar-link>
     </side-bar>
     <div class="main-panel">
