@@ -46,13 +46,13 @@
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel"> View Data </h5>
+              <h5 class="modal-title" id="exampleModalLabel"> View Data Proses </h5>
             </div>
             
             <div class="modal-body container">
                 
                 Data Awal
-                <table class="table table-striped">
+                <table class="table table-striped" style='font-family:"Courier New", Courier, monospace; font-size:65%' >
                     <thead>
                         <tr>
                             <th v-for="item in initialData" :key=item._id scope="col">{{item.alias}}</th>
@@ -64,7 +64,7 @@
                 </table>
 
                 Data W Baru
-                <table class="table table-striped">
+                <table class="table table-striped" style='font-family:"Courier New", Courier, monospace; font-size:65%'>
                     <thead>
                         <tr>
                             <th v-for="item in selectView.wNew" :key=item._id scope="col">{{item.alias}}</th>
@@ -76,7 +76,7 @@
                 </table>
 
                 Data Pakar Input
-                <table class="table table-striped">
+                <table class="table table-striped" style='font-family:"Courier New", Courier, monospace; font-size:65%'>
                     <thead>
                         <tr>
                             <th v-for="item in selectView.wInput" :key=item._id scope="col">{{item.alias}}</th>
@@ -88,7 +88,7 @@
                 </table>
 
                  Data WN * XN
-                <table class="table table-striped">
+                <table class="table table-striped" style='font-family:"Courier New", Courier, monospace; font-size:65%'>
                     <thead>
                         <tr>
                             <th v-for="item in selectView.wnxn" :key=item._id scope="col">{{item.alias}}</th>
