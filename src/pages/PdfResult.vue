@@ -80,9 +80,9 @@
                                     17. Hand Brake / Rem Tangan:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.handBreake === 3">Bagus</a>
-                                    <a v-show="equip.handBreake === 2">Jelek</a>
-                                    <a v-show="equip.handBreake === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.handBreake === 1">Bagus</a>
+                                    <a v-show="equip.handBreake === 0.5">Jelek</a>
+                                    <a v-show="equip.handBreake === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2 mt-1">
@@ -96,9 +96,9 @@
                                     18. Fire Extinguisher/ Racun Api:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.fireExtiungiser === 3">Bagus</a>
-                                    <a v-show="equip.fireExtiungiser === 2">Jelek</a>
-                                    <a v-show="equip.fireExtiungiser === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.fireExtiungiser === 1">Bagus</a>
+                                    <a v-show="equip.fireExtiungiser === 0.5">Jelek</a>
+                                    <a v-show="equip.fireExtiungiser === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -106,17 +106,17 @@
                                     3. First Aid/ P3K:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.firstAid === 3">Bagus</a>
-                                    <a v-show="equip.firstAid === 2">Jelek</a>
-                                    <a v-show="equip.firstAid === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.firstAid === 1">Bagus</a>
+                                    <a v-show="equip.firstAid === 0.5">Jelek</a>
+                                    <a v-show="equip.firstAid === 0">Tidak Dijumpai</a>
                                 </div> 
                                 <div class="col-md-4">
                                     19. Cabin Mirror / Kaca Spion Dalam:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.cabinMirror === 3">Bagus</a>
-                                    <a v-show="equip.cabinMirror === 2">Jelek</a>
-                                    <a v-show="equip.cabinMirror === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.cabinMirror === 1">Bagus</a>
+                                    <a v-show="equip.cabinMirror === 0.5">Jelek</a>
+                                    <a v-show="equip.cabinMirror === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -124,17 +124,17 @@
                                     4. Front Plate / Plat No. Depan:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.frontPlate === 3">Bagus</a>
-                                    <a v-show="equip.frontPlate === 2">Jelek</a>
-                                    <a v-show="equip.frontPlate === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.frontPlate === 1">Bagus</a>
+                                    <a v-show="equip.frontPlate === 0.5">Jelek</a>
+                                    <a v-show="equip.frontPlate === 0">Tidak Dijumpai</a>
                                 </div> 
                                 <div class="col-md-4">
                                     20. Jack / Dongkrak:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.jack === 3">Bagus</a>
-                                    <a v-show="equip.jack === 2">Jelek</a>
-                                    <a v-show="equip.jack === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.jack === 1">Bagus</a>
+                                    <a v-show="equip.jack === 0.5">Jelek</a>
+                                    <a v-show="equip.jack === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -142,17 +142,17 @@
                                     &nbsp;&nbsp;&nbsp;- Rear Plate / Plat No. Belakang:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.jackHandle === 3">Bagus</a>
-                                    <a v-show="equip.jackHandle === 2">Jelek</a>
-                                    <a v-show="equip.jackHandle === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.jackHandle === 1">Bagus</a>
+                                    <a v-show="equip.jackHandle === 0.5">Jelek</a>
+                                    <a v-show="equip.jackHandle === 0">Tidak Dijumpai</a>
                                 </div> 
                                 <div class="col-md-4">
                                     21. Jack Handle / Tangkai Dongkrak:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.jack === 3">Bagus</a>
-                                    <a v-show="equip.jack === 2">Jelek</a>
-                                    <a v-show="equip.jack === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.jack === 1">Bagus</a>
+                                    <a v-show="equip.jack === 0.5">Jelek</a>
+                                    <a v-show="equip.jack === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -160,17 +160,17 @@
                                     5. Inspection Book / Buku KIR(Pick-Up):
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.inspectionBook === 3">Bagus</a>
-                                    <a v-show="equip.inspectionBook === 2">Jelek</a>
-                                    <a v-show="equip.inspectionBook === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.inspectionBook === 1">Bagus</a>
+                                    <a v-show="equip.inspectionBook === 0.5">Jelek</a>
+                                    <a v-show="equip.inspectionBook === 0">Tidak Dijumpai</a>
                                 </div> 
                                 <div class="col-md-4">
                                     22. Tire Wrech / Kunci Roda:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.tireWrech === 3">Bagus</a>
-                                    <a v-show="equip.tireWrech === 2">Jelek</a>
-                                    <a v-show="equip.tireWrech === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.tireWrech === 1">Bagus</a>
+                                    <a v-show="equip.tireWrech === 0.5">Jelek</a>
+                                    <a v-show="equip.tireWrech === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -178,17 +178,17 @@
                                     6. Spare Tire / Ban Cadangan:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.spareTire === 3">Bagus</a>
-                                    <a v-show="equip.spareTire === 2">Jelek</a>
-                                    <a v-show="equip.spareTire === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.spareTire === 1">Bagus</a>
+                                    <a v-show="equip.spareTire === 0.5">Jelek</a>
+                                    <a v-show="equip.spareTire === 0">Tidak Dijumpai</a>
                                 </div> 
                                 <div class="col-md-4">
                                     23. Fan Belt / Tali Kipas:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.fanBelt === 3">Bagus</a>
-                                    <a v-show="equip.fanBelt === 2">Jelek</a>
-                                    <a v-show="equip.fanBelt === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.fanBelt === 1">Bagus</a>
+                                    <a v-show="equip.fanBelt === 0.5">Jelek</a>
+                                    <a v-show="equip.fanBelt === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -202,9 +202,9 @@
                                     24. Triangle / Segitiga Pengaman:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.triangle === 3">Bagus</a>
-                                    <a v-show="equip.triangle === 2">Jelek</a>
-                                    <a v-show="equip.triangle === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.triangle === 1">Bagus</a>
+                                    <a v-show="equip.triangle === 0.5">Jelek</a>
+                                    <a v-show="equip.triangle === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -212,9 +212,9 @@
                                     - Right / Kanan:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.headLightRight === 3">Bagus</a>
-                                    <a v-show="equip.headLightRight === 2">Jelek</a>
-                                    <a v-show="equip.headLightRight === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.headLightRight === 1">Bagus</a>
+                                    <a v-show="equip.headLightRight === 0.5">Jelek</a>
+                                    <a v-show="equip.headLightRight === 0">Tidak Dijumpai</a>
                                 </div> 
                                 <div class="col-md-4">
                                     25. Cuter Mirror / Kaca Spion:
@@ -227,17 +227,17 @@
                                     - Left / Kiri:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.headLightLeft === 3">Bagus</a>
-                                    <a v-show="equip.headLightLeft === 2">Jelek</a>
-                                    <a v-show="equip.headLightLeft === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.headLightLeft === 1">Bagus</a>
+                                    <a v-show="equip.headLightLeft === 0.5">Jelek</a>
+                                    <a v-show="equip.headLightLeft === 0">Tidak Dijumpai</a>
                                 </div> 
                                 <div class="col-md-4 pl-5">
                                     - Right / Kanan:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.cutterMirrorRight === 3">Bagus</a>
-                                    <a v-show="equip.cutterMirrorRight === 2">Jelek</a>
-                                    <a v-show="equip.cutterMirrorRight === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.cutterMirrorRight === 1">Bagus</a>
+                                    <a v-show="equip.cutterMirrorRight === 0.5">Jelek</a>
+                                    <a v-show="equip.cutterMirrorRight === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -251,9 +251,9 @@
                                     - Left / Kiri:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.cutterMirrorLeft === 3">Bagus</a>
-                                    <a v-show="equip.cutterMirrorLeft === 2">Jelek</a>
-                                    <a v-show="equip.cutterMirrorLeft === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.cutterMirrorLeft === 1">Bagus</a>
+                                    <a v-show="equip.cutterMirrorLeft === 0.5">Jelek</a>
+                                    <a v-show="equip.cutterMirrorLeft === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -267,9 +267,9 @@
                                     26. Engine Oil / Oli Mesin :
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.engineOil === 3">Bagus</a>
-                                    <a v-show="equip.engineOil === 2">Jelek</a>
-                                    <a v-show="equip.engineOil === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.engineOil === 1">Bagus</a>
+                                    <a v-show="equip.engineOil === 0.5">Jelek</a>
+                                    <a v-show="equip.engineOil === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -283,9 +283,9 @@
                                     27. Radiator Cooling Water / Air Radiator :
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.radiatorCooling === 3">Bagus</a>
-                                    <a v-show="equip.radiatorCooling === 2">Jelek</a>
-                                    <a v-show="equip.radiatorCooling === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.radiatorCooling === 1">Bagus</a>
+                                    <a v-show="equip.radiatorCooling === 0.5">Jelek</a>
+                                    <a v-show="equip.radiatorCooling === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -299,9 +299,9 @@
                                     28. Brake Oil / Minyak Rem :
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.brakeOil === 3">Bagus</a>
-                                    <a v-show="equip.brakeOil === 2">Jelek</a>
-                                    <a v-show="equip.brakeOil === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.brakeOil === 1">Bagus</a>
+                                    <a v-show="equip.brakeOil === 0.5">Jelek</a>
+                                    <a v-show="equip.brakeOil === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -309,17 +309,17 @@
                                     - Right / Kanan:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.frontFlaserLightRight === 3">Bagus</a>
-                                    <a v-show="equip.frontFlaserLightRight === 2">Jelek</a>
-                                    <a v-show="equip.frontFlaserLightRight === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.frontFlaserLightRight === 1">Bagus</a>
+                                    <a v-show="equip.frontFlaserLightRight === 0.5">Jelek</a>
+                                    <a v-show="equip.frontFlaserLightRight === 0">Tidak Dijumpai</a>
                                 </div> 
                                 <div class="col-md-4">
                                     29. Wiper Water / Air Pembersih Kaca :
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.wiperWater === 3">Bagus</a>
-                                    <a v-show="equip.wiperWater === 2">Jelek</a>
-                                    <a v-show="equip.wiperWater === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.wiperWater === 1">Bagus</a>
+                                    <a v-show="equip.wiperWater === 0.5">Jelek</a>
+                                    <a v-show="equip.wiperWater === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -327,17 +327,17 @@
                                     - Left / Kiri:
                                 </div>
                                 <div class="col-md-2">
-                                     <a v-show="equip.frontFlaserLightLeft === 3">Bagus</a>
-                                    <a v-show="equip.frontFlaserLightLeft === 2">Jelek</a>
-                                    <a v-show="equip.frontFlaserLightLeft === 1">Tidak Dijumpai</a>
+                                     <a v-show="equip.frontFlaserLightLeft === 1">Bagus</a>
+                                    <a v-show="equip.frontFlaserLightLeft === 0.5">Jelek</a>
+                                    <a v-show="equip.frontFlaserLightLeft === 0">Tidak Dijumpai</a>
                                 </div> 
                                 <div class="col-md-4">
                                     30. Battray Liquid / Air Battery :
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.liquidBAttery === 3">Bagus</a>
-                                    <a v-show="equip.liquidBAttery === 2">Jelek</a>
-                                    <a v-show="equip.liquidBAttery === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.liquidBAttery === 1">Bagus</a>
+                                    <a v-show="equip.liquidBAttery === 0.5">Jelek</a>
+                                    <a v-show="equip.liquidBAttery === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -351,9 +351,9 @@
                                     31. Air Conditioner / AC :
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.airConditioner === 3">Bagus</a>
-                                    <a v-show="equip.airConditioner === 2">Jelek</a>
-                                    <a v-show="equip.airConditioner === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.airConditioner === 1">Bagus</a>
+                                    <a v-show="equip.airConditioner === 0.5">Jelek</a>
+                                    <a v-show="equip.airConditioner === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -361,17 +361,17 @@
                                     - Right / Kanan:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.rearFlaserLightRight === 3">Bagus</a>
-                                    <a v-show="equip.rearFlaserLightRight === 2">Jelek</a>
-                                    <a v-show="equip.rearFlaserLightRight === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.rearFlaserLightRight === 1">Bagus</a>
+                                    <a v-show="equip.rearFlaserLightRight === 0.5">Jelek</a>
+                                    <a v-show="equip.rearFlaserLightRight === 0">Tidak Dijumpai</a>
                                 </div> 
                                 <div class="col-md-4">
                                     32. Tire Preaseure Tester :
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.tirePreasureTester === 3">Bagus</a>
-                                    <a v-show="equip.tirePreasureTester === 2">Jelek</a>
-                                    <a v-show="equip.tirePreasureTester === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.tirePreasureTester === 1">Bagus</a>
+                                    <a v-show="equip.tirePreasureTester === 0.5">Jelek</a>
+                                    <a v-show="equip.tirePreasureTester === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -379,9 +379,9 @@
                                     - Left / Kiri:
                                 </div>
                                 <div class="col-md-2">
-                                     <a v-show="equip.rearFlaserLightLeft === 3">Bagus</a>
-                                    <a v-show="equip.rearFlaserLightLeft === 2">Jelek</a>
-                                    <a v-show="equip.rearFlaserLightLeft === 1">Tidak Dijumpai</a>
+                                     <a v-show="equip.rearFlaserLightLeft === 1">Bagus</a>
+                                    <a v-show="equip.rearFlaserLightLeft === 0.5">Jelek</a>
+                                    <a v-show="equip.rearFlaserLightLeft === 0">Tidak Dijumpai</a>
                                 </div> 
                                 <div class="col-md-4">
                                     33. Tire Preaseure / Tekanan Ban 
@@ -400,9 +400,9 @@
                                     - Front Right & Left / Depan Kanan & Kiri
                                 </div>
                                 <div class="col-md-2">
-                                     <a v-show="equip.tirePreasureFront === 3">Bagus</a>
-                                    <a v-show="equip.tirePreasureFront === 2">Jelek</a>
-                                    <a v-show="equip.tirePreasureFront === 1">Tidak Dijumpai</a>
+                                     <a v-show="equip.tirePreasureFront === 1">Bagus</a>
+                                    <a v-show="equip.tirePreasureFront === 0.5">Jelek</a>
+                                    <a v-show="equip.tirePreasureFront === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -410,17 +410,17 @@
                                     - Right / Kanan:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.stopLightRight === 3">Bagus</a>
-                                    <a v-show="equip.stopLightRight === 2">Jelek</a>
-                                    <a v-show="equip.stopLightRight === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.stopLightRight === 1">Bagus</a>
+                                    <a v-show="equip.stopLightRight === 0.5">Jelek</a>
+                                    <a v-show="equip.stopLightRight === 0">Tidak Dijumpai</a>
                                 </div> 
                                 <div class="col-md-4 pl-5">
                                     - Rear Right & Left / Belakang Kanan & Kiri
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.tirePreasureRear === 3">Bagus</a>
-                                    <a v-show="equip.tirePreasureRear === 2">Jelek</a>
-                                    <a v-show="equip.tirePreasureRear === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.tirePreasureRear === 1">Bagus</a>
+                                    <a v-show="equip.tirePreasureRear === 0.5">Jelek</a>
+                                    <a v-show="equip.tirePreasureRear === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -428,9 +428,9 @@
                                     - Left / Kiri:
                                 </div>
                                 <div class="col-md-2">
-                                     <a v-show="equip.stopLightLeft === 3">Bagus</a>
-                                    <a v-show="equip.stopLightLeft === 2">Jelek</a>
-                                    <a v-show="equip.stopLightLeft === 1">Tidak Dijumpai</a>
+                                     <a v-show="equip.stopLightLeft === 1">Bagus</a>
+                                    <a v-show="equip.stopLightLeft === 0.5">Jelek</a>
+                                    <a v-show="equip.stopLightLeft === 0">Tidak Dijumpai</a>
                                 </div> 
                                 <div class="col-md-4">
                                     34. Others / Lain-lain: 
@@ -451,9 +451,9 @@
                                     - Right / Kanan:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.backupLightRight === 3">Bagus</a>
-                                    <a v-show="equip.backupLightRight === 2">Jelek</a>
-                                    <a v-show="equip.backupLightRight === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.backupLightRight === 1">Bagus</a>
+                                    <a v-show="equip.backupLightRight === 0.5">Jelek</a>
+                                    <a v-show="equip.backupLightRight === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -461,9 +461,9 @@
                                     - Left / Kiri:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.backupLightLeft === 3">Bagus</a>
-                                    <a v-show="equip.backupLightLeft === 2">Jelek</a>
-                                    <a v-show="equip.backupLightLeft === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.backupLightLeft === 1">Bagus</a>
+                                    <a v-show="equip.backupLightLeft === 0.5">Jelek</a>
+                                    <a v-show="equip.backupLightLeft === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -471,9 +471,9 @@
                                     13. Vechile No. Light / Lampu Plat No.
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.platLight === 3">Bagus</a>
-                                    <a v-show="equip.platLight === 2">Jelek</a>
-                                    <a v-show="equip.platLight === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.platLight === 1">Bagus</a>
+                                    <a v-show="equip.platLight === 0.5">Jelek</a>
+                                    <a v-show="equip.platLight === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -481,9 +481,9 @@
                                     14. Hazard Light / Lampu Bahaya:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.hazardLight === 3">Bagus</a>
-                                    <a v-show="equip.hazardLight === 2">Jelek</a>
-                                    <a v-show="equip.hazardLight === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.hazardLight === 1">Bagus</a>
+                                    <a v-show="equip.hazardLight === 0.5">Jelek</a>
+                                    <a v-show="equip.hazardLight === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -491,9 +491,9 @@
                                     15. Horn / Klakson:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.horn === 3">Bagus</a>
-                                    <a v-show="equip.horn === 2">Jelek</a>
-                                    <a v-show="equip.horn === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.horn === 1">Bagus</a>
+                                    <a v-show="equip.horn === 0.5">Jelek</a>
+                                    <a v-show="equip.horn === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -508,9 +508,9 @@
                                     - Front / Depan:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.safetyBeltFront === 3">Bagus</a>
-                                    <a v-show="equip.safetyBeltFront === 2">Jelek</a>
-                                    <a v-show="equip.safetyBeltFront === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.safetyBeltFront === 1">Bagus</a>
+                                    <a v-show="equip.safetyBeltFront === 0.5">Jelek</a>
+                                    <a v-show="equip.safetyBeltFront === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div>
                             <div class="row mt-2">
@@ -518,9 +518,9 @@
                                     - Back / Belakang:
                                 </div>
                                 <div class="col-md-2">
-                                    <a v-show="equip.safetyBeltBack === 3">Bagus</a>
-                                    <a v-show="equip.safetyBeltBack === 2">Jelek</a>
-                                    <a v-show="equip.safetyBeltBack === 1">Tidak Dijumpai</a>
+                                    <a v-show="equip.safetyBeltBack === 1">Bagus</a>
+                                    <a v-show="equip.safetyBeltBack === 0.5">Jelek</a>
+                                    <a v-show="equip.safetyBeltBack === 0">Tidak Dijumpai</a>
                                 </div> 
                             </div><hr>
                             <div class="row mt-2">
