@@ -141,6 +141,7 @@ export default {
                         icon: 'fa fa-check',
                         type: 'success'
                     })
+                     this.$router.go(-1)
                 })
                 .catch(err =>{
                     if(err.response.status === 403){

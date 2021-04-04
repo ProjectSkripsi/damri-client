@@ -1,12 +1,21 @@
 <template>
   <card>
-    <div class="row">
+        <div class="row">
       <div class="col-md-7">
         <h4 slot="header" class="card-title">Pembobotan Kriteria</h4>
       </div>
-      
+      <div class="col-md-5 text-right">
+        <router-link :to="{ name: 'View Proccess'}"><button type="button" class="btn btn-primary btn-fill btn-sm"> Lihat Proses</button></router-link>
+      </div>
     </div><hr>
     <div class="bus mt-4" v-cloak>
+    <div v-show="isLoading" class="overlay">
+      <div class="d-flex justify-content-center">  
+        <div class="spinner-grow text-primary" role="status" style="width: 3rem; height: 3rem; z-index: 20;">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
       <v-client-table :columns="columns" :data="userList" :options="options">
         <template slot="Tindakan" slot-scope="props" class="text-center">
           <router-link :to="{ name: 'Add Criteria', params: { data: props.row, isUpdate: true }}"> <i class="fa fa-pencil-square-o"></i> </router-link>&nbsp;
@@ -29,6 +38,8 @@
       return {
         userList: [],
         columns: ['name', 'alias', 'initialWeight', 'repairWeight', 'Tindakan'],
+        isLoading: false,
+        
         options: {
           headings: {
             name: 'Kriteria',
@@ -47,8 +58,8 @@
           },
           base:'glyphicon', up:'glyphicon-chevron-up', down:'glyphicon-chevron-down', is:'glyphicon-sort',
           uniqueKey: '_id',
-          perPage: 22,
-          perPageValues:[22],
+          perPage: 23,
+          perPageValues:[23],
           sortable: ['name', 'initialWeight', ],
           filterable: ['name','initialWeight', ]
         }
@@ -56,6 +67,7 @@
     },
     methods: {
       getCriteria(){
+        this.isLoading = true
         this.$axios({
           url: `/api/criteria/test`,
           method: `get`,
@@ -65,6 +77,8 @@
         })
         .then(response=>{
           this.userList = response.data.data
+          
+          this.isLoading = false
         })
         .catch(err =>{
           console.log(err);
@@ -154,6 +168,17 @@
 .card-body {
   font-size: 12px;
 }
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 40%;
+    left: 0px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+ }
 
 
 </style>

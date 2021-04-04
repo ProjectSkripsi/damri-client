@@ -138,7 +138,7 @@
       selectUpdate (data) {
         this.show = true
         this.selectUpdated = data
-        console.log(this.selectUpdated);
+      
       },
       
       closeModal() {
