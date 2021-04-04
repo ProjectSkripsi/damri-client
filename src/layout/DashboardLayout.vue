@@ -17,23 +17,23 @@
       </sidebar-link>
       <sidebar-link to="/admin/teknisi" >
         <i class="fa fa-users"></i>
-        <p>Data Teknisi</p>
+        <p>Teknisi</p>
       </sidebar-link>
-      <sidebar-link to="/admin/result" >
-        <i class="fa fa-file-text"></i>
-        <p>Hasil Pengecekan</p>
-      </sidebar-link>
-      <sidebar-link to="/admin/cek" >
-        <i class="fa fa-file-text-o"></i>
-        <p>Cek Kendaraan</p>
+      <sidebar-link to="/admin/data-training" >
+      <i class="fas fa-train"></i>
+        <p>Data Training/Pakar</p>
       </sidebar-link>
       <sidebar-link to="/admin/criteria" >
         <i class="fa fa-calculator"></i>
         <p>Setting Bobot</p>
       </sidebar-link>
-      <sidebar-link to="/admin/data-training" >
-      <i class="fas fa-train"></i>
-        <p>Data Training</p>
+      <sidebar-link to="/admin/cek" >
+        <i class="fa fa-file-text-o"></i>
+        <p>Cek Kendaraan</p>
+      </sidebar-link>
+      <sidebar-link to="/admin/result" >
+        <i class="fa fa-file-text"></i>
+        <p>Hasil Pengecekan</p>
       </sidebar-link>
     </side-bar>
     <div class="main-panel">

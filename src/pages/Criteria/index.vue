@@ -37,14 +37,14 @@
     data () {
       return {
         userList: [],
-        columns: ['name', 'alias', 'initialWeight', 'repairWeight', 'Tindakan'],
+        columns: ['name', 'alias', 'oldWeight', 'repairWeight', 'Tindakan'],
         isLoading: false,
         
         options: {
           headings: {
             name: 'Kriteria',
             alias: 'Alias',
-            initialWeight: 'Bobot Awal',
+            oldWeight: 'Bobot Awal',
             repairWeight: 'Bobot Perbaikan'
            
           },
