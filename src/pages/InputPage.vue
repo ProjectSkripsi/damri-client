@@ -1,4 +1,4 @@
-<template>
+                <template>
     <div class="container-fluid mt-2">
         <card>
             <form-wizard @on-complete="onComplete" 
@@ -338,7 +338,8 @@ export default {
         return {
             bus: {},
             selected: {},
-            tecnicians: []
+            tecnicians: [],
+            eligibilityStandards: 0
         }
     },
 
@@ -363,18 +364,48 @@ export default {
                     }
                 })
                 .then(response =>{
-                    let good = 0.9
-                    let bad = 0.4
-                    let not = 0.1
+                    const { 
+                        engineOil, //oli mesin
+                        radiatorCooling, // air radiator
+                        brakeOil, // minyak rem
+                        liquidBAttery, //air aki
+                        airConditioner, //ac
+                        tirePreasureFront, //ban
+                        tirePreasureRear, //ban
+                        firstAid, // p3k
+                        frontPlate, //plat
+                        rearPlate, //plat
+                        headLightRight, // lampu besar
+                        headLightLeft, // lampu besar
+                        stopLightRight, //lampu rem
+                        stopLightLeft, //lampu rem
+                        hazardLight, // lmapu hati2
+                        horn, //klakson
+                        safetyBeltFront, //sabuk pengaman
+                        safetyBeltBack, //sabuk pengaman
+                        handBreake, // rem tangan
+                        jack, // dongkrak
+                        tireWrech, // kunci roda
+                        triangle, // segitiga bahaya
+                        cutterMirrorRight, // Spion Luar Kiri dan Kanan
+                        cutterMirrorLeft, // Spion Luar Kiri dan Kanan
+                        cabinMirror, // Spion Dalam
+                        rearFlaserLightRight, // lampu sein
+                        frontFlaserLightLeft, // lampu sein
+                      
+                    } = this.selected
+                    let good = 1
+                    let bad = 0.5
+                    let not = 0
                     let data ={
-                        remTangan: this.selected.handBreake,
-                        minyakRem: this.selected.brakeOil,
-                        oliMesin: this.selected.engineOil,
-                        airRadiator: this.selected.radiatorCooling,
-                        AC: this.selected.airConditioner,
-                        klakson: this.selected.horn,
-                        tekananBanDepan: this.selected.tirePreasureFront,
-                        tekananBanBelakang: this. selected.tirePreasureRear
+                        remTangan: handBreake,
+                        minyakRem: brakeOil,
+                        oliMesin: engineOil,
+                        airRadiator: radiatorCooling,
+                        AC: airConditioner,
+                        klakson: horn,
+                        tekananBanDepan: tirePreasureFront,
+                        tekananBanBelakang: tirePreasureRear
                     }
                     let more = Object.values(data)
                     let temp = []
@@ -391,7 +422,7 @@ export default {
                     }) 
                     let calc = temp.reduce(reducer)/8
                     let result = calc.toFixed(1)
-                    if(result >= 0.5 ){
+                    if(result >= eligibilityStandards ){
                         swal("Good job!", "Kendaraan yang anda periksa Layak Jalan!", "success");
                         this.$axios({
                             url: `/api/bus/worthy/${this.selected._id}`,
@@ -405,7 +436,7 @@ export default {
                         .catch(err =>{
                         })
                         
-                    } else if(result < 0.5) {
+                    } else if(result < eligibilityStandards) {
                         swal("Good job!", "Kendaraan yang anda periksa Tidak Layak Jalan!", "error");
                         this.$axios({
                             url: `/api/bus/notWorthy/${this.selected._id}`,
@@ -445,6 +476,24 @@ export default {
                 console.log(err);
             })
         },
+
+        getCriteria(){
+            
+            this.$axios({
+                url: `/api/criteria`,
+                method: `get`,
+                    headers: {
+                        token: localStorage.getItem('token')
+                    }
+                })
+            .then(response=>{
+                const value = response.data.find((item) => item.alias === 'kelayakan jalan').initialWeight;
+                this.eligibilityStandards = value 
+            })
+            .catch(err =>{
+                console.log(err);
+            })
+        },
     },
 
     computed: {
@@ -454,6 +503,7 @@ export default {
     mounted() {
         this.$store.dispatch('getBus')
         this.getTechnician()
+        this.getCriteria()
     },
   
   

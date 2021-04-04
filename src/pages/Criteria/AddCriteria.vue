@@ -20,7 +20,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <input type="text" class="form-control form-control-sm" v-model="criteria.name" placeholder="Nama Kriteria">
+                        <input type="text" class="form-control form-control-sm" disabled v-model="criteria.name" placeholder="Nama Kriteria">
                     </div>
                     <div class="col-md-3">
                     </div>
@@ -35,7 +35,7 @@
                     </div>
                     <div class="col-md-4">
                         <div>
-                            <input type="text" v-model="criteria.alias" placeholder="Alias" class="form-control form-control-sm">
+                            <input type="text" v-model="criteria.alias" disabled placeholder="Alias" class="form-control form-control-sm">
                         </div>
                     </div>
                     <div class="col-md-3">
