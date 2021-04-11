@@ -54,7 +54,16 @@
                                 <div class="col-md-5">
                                     : <u> {{equip.vechileType}} </u>
                                 </div> 
-                            </div><hr>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    Hasil Pemeriksaan
+                                </div>
+                                <div class="col-md-5">
+                                    : <u> {{equip.result}} </u>
+                                </div> 
+                            </div>
+                            <hr>
                             <div class="row">
                                 <div class="col-md-4">
                                     <b>Equipment</b>
