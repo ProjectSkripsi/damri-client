@@ -33,13 +33,14 @@
     data () {
       return {
         busList: [],
-        columns: ['day', 'busId.idBus', 'departure', 'destination', 'hoursDeparture', 'No. Polisi'],
+        columns: ['day', 'busId.idBus', 'departure', 'destination', 'hoursDeparture', 'busId.result', 'No. Polisi'],
         options: {
           headings: {
             'busId.idBus': 'Id Bus',
             departure: 'Keberangkatan',
             destination: 'Tujuan',
             hoursDeparture: 'Jam Berangkat',
+            'busId.result': 'HASIL PEMERIKSAAN',
             day: 'Hari'
           },
           requestAdapter(data) {
