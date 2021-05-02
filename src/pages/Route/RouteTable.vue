@@ -13,9 +13,9 @@
       <v-client-table :columns="columns" :data="schedules" :options="options">
         <template slot="No. Polisi" slot-scope="props" class="text-center">
           
-          <router-link v-show="props.row.busId.result" :to="{ name: 'BusDetail', params: { id: props.row.busId._id }}"> {{ props.row.busId.policeNo}} </router-link>&nbsp;
+          <router-link v-show="_.get(props, 'row.busId.result', '')" :to="{ name: 'BusDetail', params: { id: _.get(props, 'row.busId._id', '') }}"> {{ _.get((props, 'row.busId.policeNo', ''))}} </router-link>&nbsp;
          
-          <div v-show="!props.row.busId.result"> {{ props.row.busId.policeNo}} </div>
+          <div v-show="_.get(!props, 'row.busId.result', '')"> {{ _.get(props, 'row.busId.policeNo', '')}} </div>
           
         </template>
       </v-client-table>
@@ -23,7 +23,7 @@
   </card>
 </template>
 <script>
-  
+  import _ from 'lodash'
   import Card from '@/components/Cards/Card.vue'
   import notification from "@/components/NotificationPlugin/Notification.vue"
   export default {
@@ -33,7 +33,7 @@
     data () {
       return {
         busList: [],
-        columns: ['day', 'busId.idBus', 'departure', 'destination', 'hoursDeparture', 'busId.result', 'No. Polisi'],
+        columns: ['day', 'busId.idBus', 'departure', 'destination', 'hoursDeparture', 'busId.result' , 'No. Polisi'],
         options: {
           headings: {
             'busId.idBus': 'Id Bus',
@@ -69,6 +69,7 @@
           }
         })
         .then(response =>{
+          
           this.schedules = response.data
         })
         .catch(err =>{
