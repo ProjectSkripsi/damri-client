@@ -13,9 +13,9 @@
       <v-client-table :columns="columns" :data="schedules" :options="options">
         <template slot="No. Polisi" slot-scope="props" class="text-center">
           
-          <router-link v-show="_.get(props, 'row.busId.result', '')" :to="{ name: 'BusDetail', params: { id: _.get(props, 'row.busId._id', '') }}"> {{ _.get((props, 'row.busId.policeNo', ''))}} </router-link>&nbsp;
+          <router-link v-show="_.get(props, 'row.busId.result', '')" :to="{ name: 'BusDetail', params: { id: _.get(props, 'row.busId._id', '') }}"> {{props.row.busId.policeNo}} </router-link>&nbsp;
          
-          <div v-show="_.get(!props, 'row.busId.result', '')"> {{ _.get(props, 'row.busId.policeNo', '')}} </div>
+          <div v-show="!props.row.busId.result"> {{ props.row.busId.policeNo}} </div>
           
         </template>
       </v-client-table>
